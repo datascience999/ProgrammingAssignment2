@@ -7,22 +7,22 @@ makeCacheMatrix <- function(x = matrix()) {
 
     m <- NULL
     
-    # Set matrix
+    ## Set matrix
     set <- function(y) {
         x <<- y
         m <<- NULL
     }
     
-    # Get matrix
+    ## Get matrix
     get <- function() x
     
-    # Set inverse of matrix
+    ## Set inverse of matrix
     set_inv <- function(solve) m <<- solve
     
-    # Get inverse of matrix
+    ## Get inverse of matrix
     get_inv <- function() m
     
-    # Return a list with length = 4
+    ## Return a list with length = 4
     list(set = set, get = get,
         set_inv = set_inv,
         get_inv = get_inv)
